@@ -1,0 +1,6 @@
+project: log4rs
+target: log
+duration: 90
+
+cmds:
+    - cmd: /log
