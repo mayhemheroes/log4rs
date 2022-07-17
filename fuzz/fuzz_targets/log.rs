@@ -1,7 +1,7 @@
 #![no_main]
 use libfuzzer_sys::fuzz_target;
 
-use log::{error, info, warn};
+use log::{error, info, warn, debug};
 use log4rs;
 
 fuzz_target!(|data: &[u8]| {
@@ -11,6 +11,7 @@ fuzz_target!(|data: &[u8]| {
             info!("{}", s);
             error!("{}", s);
             warn!("{}", s);
+            debug!("{}", s);
         },
         _ => {},
     }
